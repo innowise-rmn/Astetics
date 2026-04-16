@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply bg-brief-bg text-brief-ink antialiased;
+  }
+}
+
+@layer components {
+  .brief-shell {
+    @apply mx-auto min-h-screen w-full max-w-6xl px-6 py-12 md:px-10;
+  }
+
+  .brief-header {
+    @apply flex flex-col gap-6 border-b border-brief-line pb-6 md:flex-row md:items-center md:justify-between;
+  }
+
+  .brief-brand {
+    @apply text-lg font-semibold uppercase tracking-display text-brief-ink;
+  }
+
+  .brief-nav {
+    @apply flex flex-wrap items-center gap-4 text-xs uppercase tracking-display text-brief-muted;
+  }
+
+  .brief-nav-link {
+    @apply transition-colors duration-150 hover:text-brief-accent;
+  }
+
+  .brief-kicker {
+    @apply text-xs uppercase tracking-display text-brief-accent;
+  }
+
+  .brief-title {
+    @apply mt-3 text-4xl font-semibold tracking-tight md:text-6xl;
+  }
+
+  .brief-subtitle {
+    @apply mt-4 max-w-3xl text-base leading-7 text-brief-muted md:text-lg;
+  }
+
+  .brief-divider {
+    @apply my-10 h-px w-full bg-gradient-to-r from-brief-accent/80 via-brief-line to-transparent;
+  }
+
+  .brief-grid {
+    @apply grid gap-4 md:grid-cols-2;
+  }
+
+  .brief-card {
+    @apply rounded-xl border border-brief-line bg-brief-panel/70 p-6 shadow-panel;
+  }
+
+  .brief-image {
+    @apply w-full rounded-xl border border-brief-line object-cover shadow-panel;
+    aspect-ratio: 16 / 9;
+  }
+
+  .brief-card-image {
+    @apply mb-4 w-full rounded-lg border border-brief-line object-cover;
+    aspect-ratio: 16 / 9;
+  }
+
+  .brief-card-title {
+    @apply text-sm uppercase tracking-display text-brief-accent;
+  }
+
+  .brief-card-copy {
+    @apply mt-3 text-sm leading-7 text-brief-muted;
+  }
+
+  .brief-section-title {
+    @apply text-2xl font-semibold tracking-tight md:text-3xl;
+  }
+
+  .brief-section-copy {
+    @apply mt-4 max-w-3xl text-sm leading-7 text-brief-muted md:text-base;
+  }
+
+  .brief-button {
+    @apply inline-flex items-center rounded-md border border-brief-accent px-4 py-2 text-xs uppercase tracking-display text-brief-accent transition-colors duration-150 hover:bg-brief-accent hover:text-brief-bg;
+  }
+
+  .brief-role-chip {
+    @apply rounded-md border border-brief-line px-3 py-1 text-xs uppercase tracking-display text-brief-accent;
+  }
+
+  .brief-input {
+    @apply mt-2 w-full rounded-md border border-brief-line bg-brief-panel px-3 py-2 text-sm text-brief-ink outline-none transition-colors duration-150 focus:border-brief-accent;
+  }
+
+  .brief-label {
+    @apply text-xs uppercase tracking-display text-brief-muted;
+  }
+
+  .system-shell {
+    @apply grid min-h-screen w-full grid-cols-1 gap-6 p-6 md:grid-cols-[280px_1fr] md:p-8;
+  }
+
+  .system-sidebar {
+    @apply rounded-xl border border-brief-line bg-brief-panel/70 p-6 shadow-panel;
+  }
+
+  .system-title {
+    @apply mt-2 text-xl font-semibold tracking-tight;
+  }
+
+  .system-meta {
+    @apply mt-2 text-xs uppercase tracking-display text-brief-muted;
+  }
+
+  .system-link {
+    @apply rounded-md border border-brief-line px-3 py-2 text-sm text-brief-muted transition-colors duration-150 hover:border-brief-accent hover:text-brief-accent;
+  }
+
+  .system-link-active {
+    @apply border-brief-accent text-brief-accent;
+  }
+
+  .system-content {
+    @apply rounded-xl border border-brief-line bg-brief-panel/50 p-6 shadow-panel;
+  }
+
+  .system-placeholder {
+    @apply min-h-[60vh];
+  }
+
+  .model3d-stub {
+    @apply rounded-xl border border-brief-line bg-brief-panel/60 p-5 shadow-panel;
+  }
+
+  .model3d-stub-head {
+    @apply flex flex-wrap items-center justify-between gap-2;
+  }
+
+  .model3d-stub-title {
+    @apply text-xs uppercase tracking-display text-brief-muted;
+  }
+
+  .model3d-stub-canvas {
+    @apply relative mt-4 flex h-44 items-center justify-center overflow-hidden rounded-lg border border-brief-line bg-brief-bg;
+  }
+
+  .model3d-stub-ring {
+    @apply absolute rounded-full border border-brief-accent/60;
+  }
+
+  .model3d-stub-ring-a {
+    width: 120px;
+    height: 120px;
+    transform: rotate(20deg);
+  }
+
+  .model3d-stub-ring-b {
+    width: 160px;
+    height: 80px;
+    transform: rotate(-15deg);
+  }
+
+  .model3d-stub-core {
+    @apply rounded-full border border-brief-accent bg-brief-panel px-4 py-3 text-sm font-semibold uppercase tracking-display text-brief-accent;
+  }
+
+  .model3d-stub-tags {
+    @apply mt-4 flex flex-wrap gap-2 text-xs uppercase tracking-display text-brief-muted;
+  }
+
+  .model3d-stub-tags span {
+    @apply rounded-md border border-brief-line px-2 py-1;
+  }
+}
